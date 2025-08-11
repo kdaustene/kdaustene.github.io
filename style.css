@@ -1,0 +1,134 @@
+html, body {
+  /* height: 100%; */
+  margin: 0;
+  background: black; /* light gray background to highlight the mobile frame */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+header {
+  background: #eee;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+}
+
+.card {
+  background: #f9f9f9;
+}
+
+.card-header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.card-details {
+  display: none;
+  padding: 8px;
+  background: #fff;
+}
+
+nav div {
+  flex: 1;
+  text-align: center;
+  padding: 8px;
+}
+
+.book-btn {
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: darkgrey;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.book-btn:hover {
+  background: #45a049;
+}
+
+.hero-section {
+  position: relative;
+  background-image: url('./taniti-hero-cover.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 6rem 1rem 4rem; /* tall enough for hero feel */
+  text-align: center;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 8px rgba(0,0,0,0.6);
+}
+
+.hero-section .book-btn {
+  max-width: 200px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Mobile container */
+.mobile-wrapper {
+  width: 375px;  /* typical mobile width */
+  height: 667px; /* typical mobile height */
+  background: white;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  border-radius: 12px;
+  overflow-y: auto; /* enable scrolling if content is tall */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar.fixed-top,
+.mobile-wrapper > nav.navbar:first-child {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #f8f9fa; /* same as Bootstrap light bg */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar.fixed-bottom,
+.mobile-wrapper > nav.navbar:last-child {
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  background: #f8f9fa;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+.mobile-wrapper > main.container {
+  flex: 1 1 auto;
+  padding-top: 56px; /* approx header height */
+  padding-bottom: 56px; /* approx footer height */
+  overflow-y: auto;
+}
+
